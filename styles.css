@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#calculator{
+    margin: 20px auto;
+    width:500px;
+    height: 600px;
+
+    background-color: gray;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+#display{
+    margin: 20px 0px;
+    width: 450px;
+    height: 100px;
+
+    font-size:x-large;
+    font-family: monospace;
+    text-align: right;
+
+    border: 10px #444 inset;
+    background-color: aliceblue;
+
+    display:flex;
+    justify-content: right;
+    align-items: end;
+}
+
+#keypad{
+    margin: 20px 0px;
+    width: 450px;
+    height: 450px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items:center;
+}
+
+.row{
+    width: 450px;
+
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content:center;
+}
+
+button{
+    padding: 10px 10px;
+    font-size:xx-large;
+    border: 2px #222 solid;
+    flex: 1;
+}
