@@ -20,6 +20,14 @@ let aIsActive = false;
 let bIsActive = false;
 let aIsSet = false;
 
+const showDivideBy0Message = function (){
+    display.textContent= "You are brave to attempt the impossible";
+    operator = a = b = result = "";
+    aIsActive = false;
+    bIsActive = false;
+    aIsSet = false;
+};
+
 const operate = function(a, operator, b) {
     switch (operator){
         case "+": 
@@ -102,6 +110,10 @@ for (let i=0; i< opButtons.length; i++) {
 
             else{
             result = operate(+a, operator, +b);
+            if(result == "Infinity"){
+                //showDivideBy0Message();
+                return;
+            }
             display.textContent = result;
             a = result;
             b = "";
@@ -124,6 +136,10 @@ btnEquals.onclick= function(){
     if(aIsSet && b !== ""){ //then we can proceed
         console.log(`trying ${a} ${operator} ${b} `);
         result = operate(+a, operator, +b);
+        if(result == "Infinity"){
+            showDivideBy0Message();
+            return;
+        }
         display.textContent = result;
         a = b = operator = "";
 
