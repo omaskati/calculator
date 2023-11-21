@@ -1,0 +1,35 @@
+while aIsActive
+    if digit is pressed
+        write to a 
+    if operator is pressed
+        set a
+        b is aIsActive
+        display operator
+    else if equals is pressed
+        do nothing?
+    else if clear is pressed
+        clear display
+        reset a, b, operator?
+
+while bIsActive
+    if digit is pressed
+        write to b
+    if operator is pressed
+        set b
+        operate on a and b
+        set a equal to result
+        clear b
+        display result
+        b remains active
+    if equals
+        set b
+        operate on a and b
+        set a equal to result
+        clear b
+        display result
+        a is active
+    else if clear is pressed
+        clear display
+        reset a, b, operator?
+
+
