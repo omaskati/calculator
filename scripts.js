@@ -94,9 +94,13 @@ for (let i=0; i< opButtons.length; i++) {
             display.textContent += " " + operator + " ";
         }
         else if(bIsActive){
-            if(b === "") return; //don't allow multiple operators in a row
+            if(b === ""){ //don't allow multiple operators in a row, assume operator should be changed
+                console.log(`changing ${operator} to ${opButtons[i].innerText}`);
+                display.textContent = display.textContent.replace(operator, opButtons[i].innerText); // replace current operator with new one
+                operator = opButtons[i].innerText;
+            }
 
-            //else B Is set
+            else{
             result = operate(+a, operator, +b);
             display.textContent = result;
             a = result;
@@ -109,6 +113,7 @@ for (let i=0; i< opButtons.length; i++) {
             bIsActive = true;
             operator = opButtons[i].innerText;
             display.textContent += " " + operator + " ";
+            }
         }
 
     };
