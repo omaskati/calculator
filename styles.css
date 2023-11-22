@@ -68,3 +68,17 @@ button{
     border: 2px #222 solid;
     flex: 1;
 }
+
+.operator-btn{
+    background-color: #f8b557ef;
+}
+
+.function-btn#equals{
+    background-color: #ee6363f4;
+    color: white;
+}
+
+.function-btn#clear{
+    color: white;
+    background-color: #444;
+}
