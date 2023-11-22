@@ -111,7 +111,7 @@ for (let i=0; i< opButtons.length; i++) {
             else{
             result = operate(+a, operator, +b);
             if(result == "Infinity"){
-                //showDivideBy0Message();
+                showDivideBy0Message();
                 return;
             }
             display.textContent = result;
